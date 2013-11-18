@@ -17,12 +17,12 @@
  * @category   GtkGrab
  * @license    http://www.gnu.org/licenses/gpl-3.0.txt GPL
  * @copyright  Copyright 2010 Evan Coury (http://www.Evan.pro/)
- * @copyright  Copyright 2010 Pieter Kokx (http://blog.kokx.nl/)
+ * @copyright  Copyright 2013 Pieter Kokx (pieter [at] kokx [dot] nl)
  * @package    Server
  */
 
-// must be in the format 'user' => 'token'
-$users = array('myuser' => 'mypass');
+$config = require 'config.php';
+$users = $config['users'];
 
 // read the input
 $input = file_get_contents("php://input");
